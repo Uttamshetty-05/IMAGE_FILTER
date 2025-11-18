@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple CSS Image Filter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>📸 Basic Image Filter App</h1>
+
+        <div class="image-area">
+            <img id="imageToFilter" src="photo.png" alt="Image to Filter">
+        </div>
+
+        <div class="controls-area">
+            <h2>Adjust Filters</h2>
+
+            <div class="control-group">
+                <label for="grayscale">Grayscale: <span id="grayscaleValue">0</span>%</label>
+                <input type="range" id="grayscale" min="0" max="100" value="0" data-filter="grayscale" data-unit="%">
+            </div>
+
+            <div class="control-group">
+                <label for="contrast">Contrast: <span id="contrastValue">100</span>%</label>
+                <input type="range" id="contrast" min="0" max="200" value="100" data-filter="contrast" data-unit="%">
+            </div>
+
+            <div class="control-group">
+                <label for="brightness">Brightness: <span id="brightnessValue">100</span>%</label>
+                <input type="range" id="brightness" min="0" max="200" value="100" data-filter="brightness" data-unit="%">
+            </div>
+
+            <div class="control-group">
+                <label for="blur">Blur: <span id="blurValue">0</span>px</label>
+                <input type="range" id="blur" min="0" max="10" value="0" data-filter="blur" data-unit="px">
+            </div>
+
+            <button id="resetButton">Reset Filters</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
